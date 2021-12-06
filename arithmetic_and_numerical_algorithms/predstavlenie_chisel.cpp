@@ -32,7 +32,7 @@ int main()
             for (int p1 = 3; p1 * p1 < N; p1 += 2)
                 if ( !( N % p1 ) )
                     {
-                        A = N / 2;
+                        A = N / p1;
                         cout << A << ' ' << N - A << endl;
                         return 0;
                     }    
