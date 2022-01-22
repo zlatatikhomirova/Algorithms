@@ -57,7 +57,7 @@ int BinarySearch(int val, vector<int>& A)
         if (A[middle] == val) index = middle;
         else
         {
-            if (val < A[middle]) right = middle - 1
+            if (val < A[middle]) right = middle - 1;
             else left = middle + 1;
         }
     }
