@@ -44,3 +44,22 @@ else r = now;
 printf("%d", r+x);
 return 0;
 }
+
+
+
+
+int BinarySearch(int val, vector<int>& A)
+{
+    int left = 0, right = A.size() - 1, index = -1;
+    while ((left <= right) && (index == -1))
+    {
+        int middle = (left + right) / 2;
+        if (A[middle] == val) index = middle;
+        else
+        {
+            if (val < A[middle]) right = middle - 1
+            else left = middle + 1;
+        }
+    }
+    return index;
+    }
