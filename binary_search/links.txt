@@ -1,1 +1,12 @@
 https://informatics.msk.ru/mod/statements/view.php?id=51336&chapterid=1126#1
+https://algorithmica.org/tg/binary-search
+https://informatics.msk.ru/mod/resource/view.php?id=784&forceview=1
+https://neerc.ifmo.ru/wiki/index.php?title=%D0%A6%D0%B5%D0%BB%D0%BE%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B4%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D1%8B%D0%B9_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA#.D0.90.D0.BB.D0.B3.D0.BE.D1.80.D0.B8.D1.82.D0.BC_.D0.B4.D0.B2.D0.BE.D0.B8.D1.87.D0.BD.D0.BE.D0.B3.D0.BE_.D0.BF.D0.BE.D0.B8.D1.81.D0.BA.D0.B0
+перебора с предпочтением
+https://informatics.msk.ru/mod/page/view.php?id=1483
+
+double qbrt(double x)
+{
+    return pow(x, 1.0 / 3.0);
+}
+const double eps = 1e-12;
