@@ -2,7 +2,7 @@
 #define forn(i,a,b) for (int i = a; i < b; i++)
 using namespace std;
 
-int bin_search(int x, int L, int R, vector<int>& a);
+int bin_search(int x, vector<int>& a);
 
 int main()
     {
@@ -17,23 +17,21 @@ int main()
            cin >> arr2[i];
 
         forn(i,0,K)
-        {
-            int R = bin_search(arr2[i], 0, N-1, arr1);
-            cout << arr1[R] << endl;
-        }
+            cout << arr1[bin_search(arr2[i], arr1)] << endl;
         return 0;
     }
-int bin_search(int x, int L, int R, vector<int>& a)
+int bin_search(int x, vector<int>& A)
     {
-        int left, right, m;
-        left = L; right = R;
-        while (right - left > 1)
+        int n = A.size(), l = -1, r = A.size();
+        if (n == 1)
+            return 0;
+        while (l+1 < r)
         {
-            m = (right + left) / 2;
-            if (a[m] == x)
-                return m;
-            if (a[m] < x) left = m;
-            else right = m;
+            int m = (l+r)/2;
+            if (A[m] == x) return m;
+            if (A[m] < x) l = m;
+            else r = m;
         }
-    return right-1;
+        if (!r) return 0;
+        return (((0 < r) && (r < n)) && ((abs(A[r] - x) < abs(A[r-1] - x))))?r:r-1;
     }
