@@ -1,15 +1,18 @@
 from numpy.random import randint as rand
 
 def LBinS(A, x, n):
+    """
+    Плохой вариант решения, потому что не работает на минимальном тесте (1, 1, 1, 1), асимптотика O(N), не O(logN).
+    """
     l, r = -1, n
     while (r>l+1):
         m = (l+r)//2
-        if A[m] == x:
+        if A[m] == x: 
             a, b = [m]*2
-            while A[b] == x:
+            while A[b] == x:  # за линейное время
                 b -= 1
             b+=2
-            while a < n and A[a] == x:
+            while a < n and A[a] == x: 
                 a += 1
             return b, a
         if A[m] < x:
@@ -17,6 +20,24 @@ def LBinS(A, x, n):
         else:
             r = m
     return 0
+
+def lbinsearch(A, l, r):
+    while l < r:
+        m = (l + r) // 2
+        if A[m] > x:
+            r = m
+        else:
+            l = m + 1
+    return l
+
+def rbinsearch(A, l, r):
+    while l < r:
+        m = (l + r + 1) // 2
+        if A[m] < x:
+            l = m
+        else:
+            r = m - 1
+    return l
 
 def CHECKLBinS(A, x, n):
     a, i = 0, 0
